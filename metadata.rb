@@ -1,5 +1,5 @@
 name             'base'
-maintainer       'OSU Open Source Lab'
+maintainer       'Oregon State University'
 maintainer_email 'rudy@osuosl.org'
 license          'Apache 2.0'
 description      'Installs/Configures base packages'
