@@ -1,6 +1,35 @@
 case node['platform_family']
 when "rhel"
-  default['base']['packages'] = %w[ vim bash-completion bwm-ng cronie cronie-anacron crontabs dmidecode htop iotop pv pwgen screen strace time ]
+  default['base']['packages'] = %w[ vim 
+                                    bash-completion 
+                                    bwm-ng 
+                                    cronie 
+                                    cronie-anacron 
+                                    crontabs 
+                                    dmidecode 
+                                    htop 
+                                    iotop 
+                                    pv 
+                                    pwgen 
+                                    screen 
+                                    strace 
+                                    time
+                                    lsof 
+                                    iptables 
+                                    jwhois 
+                                    curl 
+                                    wget 
+                                    rsync 
+                                    nmap 
+                                    traceroute 
+                                    ethtool 
+                                    iproute 
+                                    iputils 
+                                    nc 
+                                    tcputils 
+                                    tcpdump 
+                                    elinks 
+                                    lynx]
 when "debian"
   default['base']['packages'] = %w[ bwm-ng cron dmidecode htop iotop pv pwgen screen strace time ]
 end
