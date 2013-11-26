@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
       },
       :authorization => {
         :sudo => {
-          :users => ['vagrant'],
+          :users => ['vagrant', 'centos'],
           :passwordless => true
         }
       }
@@ -51,9 +51,6 @@ Vagrant.configure("2") do |config|
 
     # If using data bags, tell vagrant where they are located
     chef.data_bags_path = "/home/#{ENV['USER']}/git/chef-repo/data_bags"
-
-    # If using encrypted data bags, make sure you tell vagrant where the secret key is
-    chef.encrypted_data_bag_secret_key_path = "/home/#{ENV['USER']}/.chef/encrypted_data_bag_secret"
 
     chef.run_list = [
         "recipe[base::managed]"
