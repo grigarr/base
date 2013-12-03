@@ -16,3 +16,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+template "/var/lib/denyhosts/alloed-hosts"
+  source "allowed-hosts.erb"
+  mode 0644
+  owner "root"
+  group "root"
+end
