@@ -51,3 +51,6 @@ default['nsswitch']['automount'] = "files"
 default['nsswitch']['aliases'] = "files"
 
 default['users'] = ['osl-root', 'osl-osuadmin']
+
+# Include other hosts to not block in the node attributes
+default['denyhosts']['allowed']
