@@ -17,9 +17,18 @@
 # limitations under the License.
 #
 
-template "/var/lib/denyhosts/alloed-hosts"
+yum_package "denyhosts" do
+  action :install
+end
+
+service "denyhosts" do
+  action [:enable, :restart]
+end
+
+template "/var/lib/denyhosts/allowed-hosts" do
   source "allowed-hosts.erb"
   mode 0644
   owner "root"
   group "root"
+  variables(:hosts => node['denyhosts']['allowed'])
 end
