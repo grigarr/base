@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-yum_package "denyhosts" do
+package "denyhosts" do
   action :install
 end
 
