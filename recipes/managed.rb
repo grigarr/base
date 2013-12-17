@@ -114,6 +114,6 @@ unless Chef::Config[:solo]
   include_recipe "monitoring"
 end
 include_recipe "sysctl"
-unless Chef::Config[:solo]
-  include_recipe "rsyslog::client"
-end
+#unless Chef::Config[:solo]
+#  include_recipe "rsyslog::client"
+#end
