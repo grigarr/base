@@ -115,5 +115,5 @@ unless Chef::Config[:solo]
 end
 include_recipe "sysctl"
 unless Chef::Config[:solo]
-  include_recipe "rsyslog::client"
+  include_recipe "rsyslog::default"
 end
