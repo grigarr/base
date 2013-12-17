@@ -75,9 +75,9 @@ node.override['ldap']['uri'] = "ldaps://ldap1.osuosl.org/ ldaps://ldap2.osuosl.o
 node.override['ldap']['base'] = "dc=osuosl,dc=org"
 
 # Rsyslog configuration
-#node.default['rsyslog']['server_search'] = "role:logstash_server"
-#node.default['rsyslog']['port'] = "5000"
-#node.default['rsyslog']['preserve_fqdn'] = "on"
+node.default['rsyslog']['server_search'] = "role:logstash_server"
+node.default['rsyslog']['port'] = "5000"
+node.default['rsyslog']['preserve_fqdn'] = "on"
 
 # Nagios backend IP configuration
 mon_host = ['127.0.0.1']
@@ -114,6 +114,6 @@ unless Chef::Config[:solo]
   include_recipe "monitoring"
 end
 include_recipe "sysctl"
-#unless Chef::Config[:solo]
-#  include_recipe "rsyslog::client"
-#end
+unless Chef::Config[:solo]
+  include_recipe "rsyslog::client"
+end
