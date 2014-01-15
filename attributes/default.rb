@@ -20,14 +20,12 @@ when "rhel"
                                     curl 
                                     wget 
                                     rsync 
-                                    nmap 
                                     traceroute 
                                     ethtool 
                                     iproute 
                                     iputils 
                                     nc 
                                     tcputils 
-                                    tcpdump 
                                     elinks 
                                     lynx]
 when "debian"
