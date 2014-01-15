@@ -10,3 +10,7 @@ yum_key "RPM-GPG-KEY-puppetlabs" do
   url "https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs"
   action :add
 end
+
+package "puppet" do
+  action :install
+end
