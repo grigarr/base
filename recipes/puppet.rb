@@ -2,7 +2,8 @@
 yum_repository "puppetlabs" do
   repo_name "puppetlabs"
   description "puppetlabs repo $releasever - $basearch"
-  url "http://packages.osuosl.org/repositories/centos-$releasever/osl/$basearch"
+  url "http://yum.puppetlabs.com/el/6/products/$basearch"
+  gpgkey "https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs"
   action :create
 end
 
