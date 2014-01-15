@@ -38,9 +38,3 @@ template "/etc/nsswitch.conf" do
   group "root"
   variables(:settings => node['nsswitch'])
 end
-
-# Remove SELinux enforcing
-case node['platform_family']
-when "rhel"
-  include_recipe 'selinux::permissive'
-end

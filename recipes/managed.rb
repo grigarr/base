@@ -92,6 +92,7 @@ node.default['nagios']['allowed_hosts'] = mon_host.uniq
 
 
 # Include the base_managed recipes
+include_recipe "base::selinux"
 include_recipe "base::unmanaged"
 unless Chef::Config[:solo]
   include_recipe "firewall"
